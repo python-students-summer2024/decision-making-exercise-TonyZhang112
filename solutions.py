@@ -43,13 +43,10 @@ def get_greatest():
     #### write your solution for this function below here. ####
     number_1= int(input('Please input a number:'))
     number_2= int(input('Please input another number:'))
-    if number_1 > number_2:
+    if number_1 >= number_2:
         return number_1
-    elif number_2 > number_1:
-        return number_2
     else:
-        return number_1
-
+        return number_2
 
 def get_bmi_category():
     """
@@ -125,12 +122,12 @@ def is_leap_year():
         get_year()
     )  # this line is given to you - the variable, year, holds the current year
     #### write your solution for this function below here. ####
-    if year % 100==0:
-        if year % 400 == 0: 
+    if year % 100==0: #determine if the curent year is a  century year
+        if year % 400 == 0: # determine whether the current century year is a leap year
           return True
         else:
           return False
-    elif year % 4 == 0:
+    elif year % 4 == 0: # determine whether the current not century year is a leap year
         return True
     else:
         return False
